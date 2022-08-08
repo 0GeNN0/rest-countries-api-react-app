@@ -1,0 +1,47 @@
+@import "../base/variables";
+
+header {
+  position: relative;
+  margin-bottom: 60px;
+
+  .header {
+    padding: $main-space;
+    @extend %flex-space-between;
+
+    .toggle-theme {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font: {
+        weight: 600;
+        size: 16px;
+      }
+
+      svg {
+        width: $main-space;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  header {
+    .header {
+      padding-block: 30px;
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .toggle-theme {
+        font-size: 14px;
+
+        svg {
+          width: 15px;
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+}
