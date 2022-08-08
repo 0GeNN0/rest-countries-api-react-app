@@ -15,6 +15,18 @@ export default function Select({ isDark, region, handleFilters, isOpened, setIsO
     color: isDark ? '#FFF' : '#111517'
   };
 
+  const resetStyle = {
+    position: 'absolute',
+    top: '-35px',
+    left: '0px',
+    padding: '5px 10px',
+    backgroundColor: isDark ? 'rebeccapurple' : '#111517',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    color: 'white',
+    fontWeight: '600'
+  };
+
   return (
     <div className="list-parent">
       <div
@@ -32,6 +44,7 @@ export default function Select({ isDark, region, handleFilters, isOpened, setIsO
         <span onClick={(e) => handleFilterByRegion(e)}>Oceania</span>
         <span onClick={(e) => handleFilterByRegion(e)}>Americas</span>
       </div>
+      {region && <span style={resetStyle} onClick={() => handleFilters('byRegion', '')}>Reset Filters</span>}
     </div>
   );
 }

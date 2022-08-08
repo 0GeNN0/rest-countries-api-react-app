@@ -49,13 +49,7 @@ function Details({ countries, isDark }) {
                 {
                   typeof languages !== 'string' ?
 
-                    languages.map((lang, i) => {
-                      if (i === languages.length - 1) {
-                        return lang;
-                      } else {
-                        return `${lang}, `;
-                      }
-                    })
+                    languages.join(', ')
                     :
                     languages
                 }
