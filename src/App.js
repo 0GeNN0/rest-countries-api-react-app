@@ -92,7 +92,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router basename="/rest-countries-api-react-app">
         <Header
           isDark={isDark}
           toggleTheme={toggleTheme}
@@ -100,7 +100,7 @@ function App() {
 
         <Routes>
           <Route
-            path="/"
+            path="/rest-countries-api-react-app"
             element={
               <HomePage
                 isDark={isDark}
