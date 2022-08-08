@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { v4 as uuidv4 } from "uuid";
 
 import Header from './components/Header';
@@ -89,10 +89,11 @@ function App() {
     getCountries();
 
   }, []);
-
+  // basename="/rest-countries-api-react-app"
+  // rest-countries-api-react-app
   return (
     <>
-      <Router basename="/rest-countries-api-react-app">
+      <Router>
         <Header
           isDark={isDark}
           toggleTheme={toggleTheme}
@@ -100,7 +101,7 @@ function App() {
 
         <Routes>
           <Route
-            path="/rest-countries-api-react-app"
+            path="/"
             element={
               <HomePage
                 isDark={isDark}
