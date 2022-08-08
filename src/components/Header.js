@@ -9,7 +9,7 @@ export default function Header({ isDark, toggleTheme }) {
 
   return (
     <header style={headerStyle}>
-      <div className="header container">
+      <nav className="header container">
         <h1>Where in the world?</h1>
 
         {
@@ -27,7 +27,7 @@ export default function Header({ isDark, toggleTheme }) {
             </div>
         }
 
-      </div>
+      </nav>
     </header>
   );
 }
