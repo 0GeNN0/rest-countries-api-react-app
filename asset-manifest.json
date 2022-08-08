@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rest-countries-api-react-app/static/css/main.b672b88e.css",
+    "main.js": "/rest-countries-api-react-app/static/js/main.f9cb4681.js",
+    "index.html": "/rest-countries-api-react-app/index.html",
+    "static/media/search-icon-light.svg": "/rest-countries-api-react-app/static/media/search-icon-light.7c104b54bc9726a411eb.svg",
+    "static/media/search-icon.svg": "/rest-countries-api-react-app/static/media/search-icon.97509e16a651fe36332c.svg",
+    "main.b672b88e.css.map": "/rest-countries-api-react-app/static/css/main.b672b88e.css.map",
+    "main.f9cb4681.js.map": "/rest-countries-api-react-app/static/js/main.f9cb4681.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b672b88e.css",
+    "static/js/main.f9cb4681.js"
+  ]
+}
