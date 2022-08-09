@@ -32,4 +32,4 @@ function Header({ isDark, toggleTheme }) {
   );
 }
 
-export default React.meme(Header);
+export default React.memo(Header);
