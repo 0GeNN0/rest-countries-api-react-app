@@ -3,7 +3,7 @@ import React from "react";
 import Filters from "./Filters";
 import Country from "./Country";
 
-export default function HomePage({ isDark, searchText, region, state, handleFilters, filteredCountries }) {
+function HomePage({ isDark, searchText, region, state, handleFilters, filteredCountries }) {
   const [isOpened, setIsOpened] = React.useState(false);
 
   function closeOpenedList() {
@@ -57,7 +57,7 @@ export default function HomePage({ isDark, searchText, region, state, handleFilt
 
                 :
 
-                <h1 style={h1Style}>Country Not Found There Is No Match</h1>
+                !state.error && <h1 style={h1Style}>Country Not Found There Is No Match</h1>
             )
         }
         {state.error && <h1 style={h1Style}>{state.error}</h1>}
@@ -65,3 +65,5 @@ export default function HomePage({ isDark, searchText, region, state, handleFilt
     </main >
   );
 }
+
+export default React.memo(HomePage);

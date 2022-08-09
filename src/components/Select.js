@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Select({ isDark, region, handleFilters, isOpened, setIsOpened }) {
+function Select({ isDark, region, handleFilters, isOpened, setIsOpened }) {
 
 
   function handleFilterByRegion(e) {
@@ -49,3 +49,4 @@ export default function Select({ isDark, region, handleFilters, isOpened, setIsO
   );
 }
 
+export default React.memo(Select);

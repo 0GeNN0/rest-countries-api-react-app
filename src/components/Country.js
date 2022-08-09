@@ -1,6 +1,7 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Country({ name, population, region, capital, flag, id, isDark }) {
+function Country({ name, population, region, capital, flag, id, isDark }) {
 
   const styles = {
     color: isDark ? '#FFF' : '#111517',
@@ -9,7 +10,7 @@ export default function Country({ name, population, region, capital, flag, id, i
   };
 
   return (
-    <section className="country" style={styles}>
+    <div className="country" style={styles}>
       <Link to={`/country/${id}`}>
         <div className="img-parent">
           <img src={flag} alt="country" className="img" />
@@ -21,6 +22,8 @@ export default function Country({ name, population, region, capital, flag, id, i
         <p>Region: {region}</p>
         <p>Capital: {capital}</p>
       </article>
-    </section>
+    </div>
   );
 }
+
+export default React.memo(Country);

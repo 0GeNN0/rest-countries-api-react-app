@@ -2,7 +2,7 @@ import React from "react";
 
 import Select from "./Select";
 
-export default function Filters({ isDark, searchText, region, handleFilters, isOpened, setIsOpened }) {
+function Filters({ isDark, searchText, region, handleFilters, isOpened, setIsOpened }) {
 
 
   const headerStyle = {
@@ -32,3 +32,5 @@ export default function Filters({ isDark, searchText, region, handleFilters, isO
     </div>
   );
 }
+
+export default React.memo(Filters);

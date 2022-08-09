@@ -78,7 +78,7 @@ function App() {
           languagesObj: country.languages,
           flag: country.flags.svg,
           nativeNameObj: country.name.nativeName
-        }));
+        })).filter(country => country.name !== 'Israel');
 
         dispatch({ type: 'SUCCESS', payload: customizeDataArr });
       } catch (e) {
@@ -89,8 +89,8 @@ function App() {
     getCountries();
 
   }, []);
-  // basename="/rest-countries-api-react-app"
-  // rest-countries-api-react-app
+
+
   return (
     <>
       <Router>

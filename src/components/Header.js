@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Header({ isDark, toggleTheme }) {
+function Header({ isDark, toggleTheme }) {
   const headerStyle = {
     backgroundColor: isDark ? '#2b3945' : '#FFF',
     color: isDark ? '#FFF' : '#111517',
@@ -31,3 +31,5 @@ export default function Header({ isDark, toggleTheme }) {
     </header>
   );
 }
+
+export default React.meme(Header);
